@@ -16,17 +16,24 @@ public class Tarea2_Ejercicio4 {
 		int menor = 0;
 		int contador;
 
-		while (numero1 == numero2) {
+		try {
+			while (numero1 == numero2) {
 
-			System.out.println("Solo puedes introducir números diferentes ");
+				System.out.println("Solo puedes introducir números diferentes ");
 
-			System.out.print("Introduce el primer número: ");
+				System.out.print("Introduce el primer número: ");
 
-			numero1 = entradanumeros.nextInt();
+				numero1 = entradanumeros.nextInt();
 
-			System.out.print("Introduce el segundo número, distinto del primero: ");
+				System.out.print("Introduce el segundo número, distinto del primero: ");
 
-			numero2 = entradanumeros.nextInt();
+				numero2 = entradanumeros.nextInt();
+
+			}
+
+		} catch (Exception e) {
+			System.out.println("SE HA INTROUCIDO DATOS INCORRECTOS");
+			System.exit(0);
 
 		}
 
@@ -46,7 +53,7 @@ public class Tarea2_Ejercicio4 {
 
 		System.out.println("");
 
-		System.out.print("Lista ascendente desde  " + menor + " hasta " + mayor + " es: ");
+		System.out.print("Lista ascendente desde  " + menor + " hasta " + media + " es: ");
 
 		do {
 			for (contador = menor; contador < media + 1; contador++) {
@@ -63,7 +70,7 @@ public class Tarea2_Ejercicio4 {
 
 		System.out.println("");
 
-		System.out.print("Lista descendente desde  " + mayor + " hasta " + menor + " es: ");
+		System.out.print("Lista descendente desde  " + mayor + " hasta " + media + " es: ");
 
 		do {
 			for (contador = mayor; contador > media - 1; contador--) {
